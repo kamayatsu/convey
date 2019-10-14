@@ -1,3 +1,7 @@
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+import '@fortawesome/fontawesome-free/js/all'
+import '../stylesheets/application.scss'
 // This file is automatically compiled by Webpack, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
@@ -15,3 +19,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+// loads the Icon plugin
+UIkit.use(Icons);
+
+// components can be called from the imported UIkit reference
+UIkit.notification('Hello world.');
