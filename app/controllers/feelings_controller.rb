@@ -17,16 +17,14 @@ class FeelingsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 
   private
+
   def set_feeling
     @feeling = Feeling.find(params[:id])
   end
