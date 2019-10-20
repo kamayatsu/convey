@@ -1,0 +1,7 @@
+<%= form_with(model: @feeling, local: true) do |form| %>
+<%= form.text_field :subject %>
+<%= form.text_field :detail %>
+<%= form.text_field :organization %>
+<%= form.text_field :response %>
+<%= form.submit %>
+<% end %>
