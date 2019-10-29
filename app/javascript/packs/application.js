@@ -26,3 +26,5 @@ UIkit.use(Icons);
 
 // components can be called from the imported UIkit reference
 window.UIkit = UIkit;
+require("trix")
+require("@rails/actiontext")

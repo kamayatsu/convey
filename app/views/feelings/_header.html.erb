@@ -1,0 +1,24 @@
+<div class="uk-container uk-container-center">
+  <div class="header">
+    <%= link_to root_path do %>
+    <%= image_tag "/logo1.png", class: "title uk-padding uk-padding-remove-bottom" %>
+    <% end %>
+    <div class="buttons  uk-margin-medium uk-margin-remove-bottom">
+      <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+      <button class="uk-button uk-button-default">ログアウト</button>
+      <% end %>
+      <% else %>
+      <%= link_to new_user_registration_path do %>
+      <button class="uk-button uk-button-default">新規登録</button>
+      <% end %>
+      <%= link_to new_user_session_path do %>
+      <button class="uk-button uk-button-default uk-margin-small-left">ログイン</button>
+      <% end %>
+      <% end %>
+      <%= link_to new_feeling_path do %>
+      <button class="uk-button uk-button-default uk-margin-small-left">投稿する</button>
+      <% end %>
+    </div>
+  </div>
+</div>

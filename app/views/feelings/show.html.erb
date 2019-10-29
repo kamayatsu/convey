@@ -1,0 +1,26 @@
+<%= render "header" %>
+<div class="uk-container uk-container-center uk-width-xxlarge uk-margin-top uk-margin-medium-bottom">
+  <img data-src="/mountain.jpg" alt="" class="uk-margin-medium-top" uk-img>
+  <article class="uk-article uk-margin-medium-top">
+
+    <h1 class="uk-article-title"><a class="uk-link-reset" href=""><%= @feeling.subject %></a></h1>
+
+    <p class="uk-article-meta">Written by <a href="#"><%= @feeling.user.email %></a> on 12 April 2012. Posted in <a
+        href="#">Blog</a>
+    </p>
+
+    <p class="uk-text-lead">test
+    </p>
+
+    <p><%= @feeling.detail %></p>
+
+    <div class="uk-grid-small uk-child-width-auto" uk-grid>
+      <div>
+        <a class="uk-button uk-button-text" href="#">5 Comments</a>
+      </div>
+    </div>
+
+  </article>
+  <%= link_to 'Edit', edit_feeling_path(@feeling) %> |
+  <%= link_to 'Back', feelings_path %>
+</div>
