@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "feelings/edit", type: :view do
   before(:each) do
-    @feeling = assign(:feeling, Feeling.create!())
+    @feeling = assign(:feeling, Feeling.create!)
   end
 
   it "renders the edit feeling form" do

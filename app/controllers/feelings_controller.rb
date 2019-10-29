@@ -20,8 +20,7 @@ class FeelingsController < ApplicationController
   end
 
   # GET /feelings/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /feelings
   # POST /feelings.json
@@ -64,6 +63,7 @@ class FeelingsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_feeling
     @feeling = Feeling.find(params[:id])
