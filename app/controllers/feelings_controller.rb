@@ -10,6 +10,8 @@ class FeelingsController < ApplicationController
   # GET /feelings/1
   # GET /feelings/1.json
   def show
+    @exist = ActiveStorage::Attachment.find_by(record_id: @feeling.id)
+    @image = ActiveStorage::Blob.find(@exist.blob_id) if @exist
   end
 
   # GET /feelings/new

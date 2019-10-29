@@ -1,27 +1,39 @@
-<%= form_with(model: feeling, local: true) do |form| %>
-<% if feeling.errors.any? %>
-<div id="error_explanation">
-  <h2><%= pluralize(feeling.errors.count, "error") %> prohibited this feeling from being saved:</h2>
+<div class="uk-margin-medium uk-margin-remove-bottom">
+  <%= form_with(model: feeling, local: true) do |form| %>
+  <% if feeling.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(feeling.errors.count, "error") %> prohibited this feeling from being saved:</h2>
 
-  <ul>
-    <% feeling.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
+    <ul>
+      <% feeling.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-<div class="field">
-  <%= form.label :subject %>
-  <%= form.text_field :subject %>
-</div>
+  <div class="field">
+    <%= form.label "タイトル" %>
+    <%= form.text_field :subject %>
+  </div>
 
-<div class="field">
-  <%= form.label :detail %>
-  <%= form.rich_text_area :detail %>
-</div>
+  <div class="field">
+    <%= form.label "伝えたい相手" %>
+    <%= form.text_field :organization %>
+  </div>
 
-<div class="actions">
-  <%= form.submit %>
+  <div class="field">
+    <%= form.label :detail %>
+    <%= form.rich_text_area :detail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :response %>
+    <%= form.text_area :response %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <% end %>
 </div>
-<% end %>

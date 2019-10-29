@@ -1,18 +1,20 @@
 <%= render "header" %>
 <div class="uk-container uk-container-center uk-width-xxlarge uk-margin-top uk-margin-medium-bottom">
-  <img data-src="/mountain.jpg" alt="" class="uk-margin-medium-top" uk-img>
+  <%# できればアイキャッチを導入したい
+  <% if @exist %>
+  <%#= image_tag @image %>
+  <%# end %>
   <article class="uk-article uk-margin-medium-top">
 
     <h1 class="uk-article-title"><a class="uk-link-reset" href=""><%= @feeling.subject %></a></h1>
 
-    <p class="uk-article-meta">Written by <a href="#"><%= @feeling.user.email %></a> on 12 April 2012. Posted in <a
-        href="#">Blog</a>
-    </p>
+    <p class="uk-article-meta uk-margin-medium-bottom">Written on 31 October 2019. Posted in <a href="#">Blog</a></p>
 
-    <p class="uk-text-lead">test
-    </p>
+    <% if @feeling.organization.present? %>
+    <p class="uk-text-lead">To <%= @feeling.organization %></p>
+    <% end %>
 
-    <p><%= @feeling.detail %></p>
+    <div class="feeling-detail uk-margin-bottom"><%= @feeling.detail %></div>
 
     <div class="uk-grid-small uk-child-width-auto" uk-grid>
       <div>
