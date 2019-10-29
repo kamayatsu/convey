@@ -64,13 +64,13 @@ class FeelingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_feeling
-      @feeling = Feeling.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_feeling
+    @feeling = Feeling.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def feeling_params
-      params.require(:feeling).permit(:subject, :detail, :organization, :response).merge(user_id: current_user.id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def feeling_params
+    params.require(:feeling).permit(:subject, :detail, :organization, :response).merge(user_id: current_user.id)
+  end
 end
