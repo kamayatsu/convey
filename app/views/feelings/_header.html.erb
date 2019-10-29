@@ -16,8 +16,10 @@
       <button class="uk-button uk-button-default uk-margin-small-left">ログイン</button>
       <% end %>
       <% end %>
+      <% if user_signed_in? %>
       <%= link_to new_feeling_path do %>
       <button class="uk-button uk-button-default uk-margin-small-left">投稿する</button>
+      <% end %>
       <% end %>
     </div>
   </div>
