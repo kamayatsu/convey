@@ -4,7 +4,7 @@ class FeelingsController < ApplicationController
   # GET /feelings
   # GET /feelings.json
   def index
-    @feelings = Feeling.all
+    @feelings = Feeling.order(created_at: "DESC")
   end
 
   # GET /feelings/1
