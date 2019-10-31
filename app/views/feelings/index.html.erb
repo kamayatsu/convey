@@ -1,5 +1,5 @@
-<%= render "header" %>
-<div class="uk-container uk-container-center uk-margin-medium-bottom">
+<div class="head">
+  <%= render "header" %>
   <ul class="uk-padding" uk-tab>
     <li class="uk-active"><a href="#">ホーム</a></li>
     <li><a href="#">おすすめ</a></li>
@@ -8,6 +8,8 @@
     <li><a href="#">注目</a></li>
     <li><a href="#">人気タグ <span class="uk-margin-small-left" uk-icon="icon: triangle-down"></span></a></li>
   </ul>
+</div>
+<div class="uk-margin-medium-bottom">
   <div class="uk-grid-match uk-grid-small" uk-grid>
     <div class="uk-width-2-3@m">
       <ul class="uk-comment-list uk-list-divider">
@@ -22,7 +24,7 @@
                     <a class="uk-link-reset" href="#"><%=feeling.subject%></a>
                   </h4>
                   <p class="uk-comment-meta uk-margin-remove-top">
-                    <a class="uk-link-reset" href="#">12 days ago</a>
+                    <a class="uk-link-reset" href="#"><%= time_ago_in_words(feeling.created_at) %></a>
                   </p>
                 </div>
               </div>
