@@ -14,26 +14,26 @@
 
   <div class="field">
     <%= form.label "タイトル" %>
-    <%= form.text_field :subject %>
+    <%= form.text_field :subject, class: "uk-input", placeholder: "title" %>
   </div>
 
   <div class="field">
     <%= form.label "伝えたい相手" %>
-    <%= form.text_field :organization %>
+    <%= form.text_field :organization, class: "uk-input", placeholder: "organization or name" %>
   </div>
 
   <div class="field">
     <%= form.label :detail %>
-    <%= form.rich_text_area :detail %>
+    <%= form.rich_text_area :detail, class: "uk-textarea", placeholder: "detail" %>
   </div>
 
   <div class="field">
     <%= form.label :response %>
-    <%= form.text_area :response %>
+    <%= form.text_area :response, class: "uk-textarea", size: "10x5", placeholder: "相手からの返信" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "送信する", class: "uk-button uk-button-default" %>
   </div>
   <% end %>
 </div>
