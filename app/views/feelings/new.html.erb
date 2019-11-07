@@ -1,12 +1,7 @@
-<div class="uk-container uk-container-center">
-  <div class="header">
-    <%= link_to root_path do %>
-    <%= image_tag "/logo1.png", class: "title uk-padding uk-padding-remove-bottom" %>
-    <% end %>
-  </div>
+<div class="uk-margin-medium-bottom">
+  <%= render 'shared/simple-header' %>
 
   <%= render 'form', feeling: @feeling %>
 
   <%= link_to 'Back', feelings_path %>
-
 </div>

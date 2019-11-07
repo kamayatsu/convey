@@ -1,6 +1,8 @@
-<h2>Resend confirmation instructions</h2>
+<%= render "shared/simple-header"%>
+<div class="uk-width-1-2 uk-margin-auto uk-margin-medium-top">
+  <h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -11,6 +13,7 @@
   <div class="actions">
     <%= f.submit "Resend confirmation instructions" %>
   </div>
-<% end %>
+  <% end %>
 
-<%= render "users/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>
