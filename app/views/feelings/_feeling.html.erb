@@ -1,0 +1,26 @@
+<li>
+  <article class="article uk-comment uk-padding uk-visible-toggle" tabindex="-1">
+    <%= link_to "", feeling_path(feeling), class: "linkbox" %>
+    <header class="uk-comment-header uk-position-relative">
+      <div class="uk-grid-medium uk-flex-middle" uk-grid>
+        <div class="uk-width-expand">
+          <h4 class="uk-comment-title uk-margin-remove">
+            <a class="uk-link-reset" href="#"><%=feeling.subject%></a>
+          </h4>
+          <p class="uk-comment-meta uk-margin-remove-top">
+            <a class="uk-link-reset" href="#"><%= time_ago_in_words(feeling.created_at) %></a>
+          </p>
+        </div>
+      </div>
+      <div class="uk-position-top-right">
+        <% exist = ActiveStorage::Attachment.find_by(record_id: feeling.id) %>
+        <% if exist %>
+        <%= image_tag ActiveStorage::Blob.find(exist.blob_id), width: "120" %>
+        <% end %>
+      </div>
+    </header>
+    <div class="uk-comment-body">
+      <p><%=feeling.organization%></p>
+    </div>
+  </article>
+</li>
