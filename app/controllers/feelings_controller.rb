@@ -5,6 +5,11 @@ class FeelingsController < ApplicationController
   # GET /feelings.json
   def index
     @feelings = Feeling.order(created_at: "DESC")
+    @recommends = Feeling.order(created_at: "ASC")
+    @magazines = Feeling.order(created_at: "DESC")
+    @pickup = Feeling.order(created_at: "ASC")
+    @attention = Feeling.order(created_at: "DESC")
+    @popular = Feeling.order(created_at: "ASC")
   end
 
   # GET /feelings/1
@@ -12,6 +17,11 @@ class FeelingsController < ApplicationController
   def show
     @exist = ActiveStorage::Attachment.find_by(record_id: @feeling.id)
     @image = ActiveStorage::Blob.find(@exist.blob_id) if @exist
+    if user_signed_in?
+      @userid = current_user.id
+    else
+      @userid = 0
+    end
   end
 
   # GET /feelings/new
