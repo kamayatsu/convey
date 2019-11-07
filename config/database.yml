@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: convey_production
   username: convey
   password: <%= ENV['CONVEY_DATABASE_PASSWORD'] %>
