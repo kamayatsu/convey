@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_10_23_133314) do
 
   create_table "feelings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.string "subject", null: false
-    t.text "detail", size: :long
+    t.text "detail", size: :medium
     t.string "organization"
     t.text "response"
     t.bigint "user_id", null: false
