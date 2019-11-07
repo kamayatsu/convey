@@ -2,7 +2,7 @@ class CreateFeelings < ActiveRecord::Migration[6.0]
   def change
     create_table :feelings do |t|
       t.string :subject, null: false
-      t.text :detail, limit: 94967295
+      t.text :detail, limit: 16777215
       t.string :organization
       t.text :response
       t.references :user, null: false, foreign_key: true
