@@ -15,6 +15,9 @@
     <% end %>
 
     <div class="feeling-detail uk-margin-bottom"><%= @feeling.detail %></div>
+    <% @feeling.tag_names.each do |tag| %>
+    <%= tag %>
+    <% end %>
   </article>
   <%= link_to 'Edit', edit_feeling_path(@feeling) %> |
   <%= link_to 'Back', feelings_path %>

@@ -28,6 +28,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :tags_as_string %>
+    <%= form.text_field :tags_as_string, class: "uk-textarea", value: feeling.tags_as_string %>
+  </div>
+
+  <div class="field">
     <%= form.label :response %>
     <%= form.text_area :response, class: "uk-textarea", size: "10x5", placeholder: "相手からの返信" %>
   </div>

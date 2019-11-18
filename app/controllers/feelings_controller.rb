@@ -81,6 +81,6 @@ class FeelingsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def feeling_params
-    params.require(:feeling).permit(:subject, :detail, :organization, :response).merge(user_id: current_user.id)
+    params.require(:feeling).permit(:subject, :detail, :organization, :tags_as_string, :response).merge(user_id: current_user.id)
   end
 end
