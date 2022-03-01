@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem "aws-sdk-s3", require: false
 gem 'devise'
-gem 'image_processing', '~>1.2'
+gem 'image_processing', '~>1.12'
 gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
